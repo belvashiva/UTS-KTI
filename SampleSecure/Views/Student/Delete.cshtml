@@ -1,0 +1,32 @@
+﻿@model SampleSecure.Models.Student
+
+@{
+    ViewData["Title"] = "Hapus Barang";
+}
+
+<h2>Hapus Barang</h2>
+
+<div>
+    <h4>Apakah Anda yakin ingin menghapus barang ini?</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            KODE
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Kode
+        </dd>
+        <dt class="col-sm-2">
+            Nama Barang
+        </dt>
+        <dd class="col-sm-10">
+            @Model.NamaBarang
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="Kode" />
+        <button type="submit" class="btn btn-danger">Hapus</button>
+        <a asp-action="Index" class="btn btn-secondary">Batal</a>
+    </form>
+</div>

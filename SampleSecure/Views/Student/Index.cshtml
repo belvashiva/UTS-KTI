@@ -1,0 +1,34 @@
+﻿@model IEnumerable<SampleSecure.Models.Student>
+
+@{
+    ViewData["Title"] = "Data Barang";
+}
+
+<h2>Data Barang</h2>
+
+<p>
+    <a asp-action="Create">Tambah Barang</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>KODE</th>
+            <th>Nama Barang</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.Kode</td>
+                <td>@student.NamaBarang</td>
+                <td>
+                    <a asp-action="Edit" asp-route-nim="@student.Kode">Edit</a> |
+                    <a asp-action="Delete" asp-route-nim="@student.Kode">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,27 @@
+﻿@model IEnumerable<SampleSecure.Models.Student> 
+
+@{
+    ViewData["Title"] = "Data Barang";
+}
+
+<h2>Data Barang</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>KODE</th>
+            <th>Nama Barang</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.Kode</td>
+                <td>@student.NamaBarang</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Index">Kembali ke Beranda</a>

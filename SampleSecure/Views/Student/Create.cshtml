@@ -1,0 +1,27 @@
+﻿@model SampleSecure.Models.Student
+
+<form asp-action="Create" method="post">
+    <div class="form-horizontal">
+        <h4>Create Barang</h4>
+        <hr>
+    
+        <div class="form-group">
+            <label asp-for="Kode" class="col-md-2 control-label"></label>
+            <div class="col-md-6">
+                <input asp-for="Kode" class="form-control" />
+            </div>
+
+           <label asp-for="NamaBarang" class="col-md-2 control-label"></label>
+            <div class="col-md-6">
+                <input asp-for="NamaBarang" class="form-control" />
+            </div>
+
+            <div class="col-md-6">
+                <input type="submit" class="btn btn-primary-sm" value="Create" />
+            </div>
+
+
+        </div>
+    </div>
+   
+</form>
